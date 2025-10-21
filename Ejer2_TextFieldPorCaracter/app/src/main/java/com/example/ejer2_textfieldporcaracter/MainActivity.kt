@@ -19,13 +19,22 @@ class MainActivity : AppCompatActivity() {
         val textField = findViewById<TextView>(R.id.textView)
 
         // USO DE LA FUNCION DE EXTENCION
-        editText.despues_cambio_texto {
+        editText.despues_cambio_texto { texto ->
+            /*
             textField.text = caracteresIntroducidos(it)
-            /* OTRA FORMA
+             OTRA FORMA
             textField.text = "_*.repeat(cadena.length)*/
+
+            var cadena=""
+            for(a in texto){
+                cadena+="_"
+            }
+            textField.text=cadena;
+
         }
 
     }
+    /*
     fun caracteresIntroducidos(caracteres: String): String {
         val numCaracteres = caracteres.toString()
         var numGuiones = "";
@@ -34,5 +43,5 @@ class MainActivity : AppCompatActivity() {
             numGuiones += "_"
         }
         return numGuiones;
-    }
+    }*/
 }
